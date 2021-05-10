@@ -20,7 +20,7 @@ cursor = memdb.cursor()
 
 
 file = open(filename, "a")
-i=0
+
 if os.stat(filename).st_size == 0:
 	theline = "Time"
 	cursor.execute("SELECT * FROM messages ORDER BY id")
@@ -29,8 +29,10 @@ if os.stat(filename).st_size == 0:
 		theline += "," + str(row[2])
 	theline += "\n"
 	file.write(theline)
+	file.flush()
+	file.close()
 while True:
-	i=i+1
+	file = open(filename, "a")
 	now = datetime.now()
 	theline = str(now)
 	cursor.execute("SELECT * FROM messages ORDER BY id")
@@ -41,5 +43,6 @@ while True:
 #	print(theline)
 	file.write(theline)
 	file.flush()
+	file.close()
 	time.sleep(logperiod)
-file.close()
+#file.close()
