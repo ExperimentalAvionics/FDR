@@ -4,3 +4,8 @@ This Python script reads data captured by the CAN_Listener and writes it into a 
 
 Prerequisites:
 CAN_Listeners script running https://github.com/ExperimentalAvionics/can_listener
+
+## Release Notes: ##
+
+### 2021-06-17 ###
+* Minor change: log frequency chnged from 5 seconds to every 2 seconds

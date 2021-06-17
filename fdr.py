@@ -7,7 +7,7 @@ from datetime import datetime
 filename = "/home/pi/fdr_data/fdr_"
 # set the the log frequency here
 # 5 = every 5 seconds
-logperiod = 5
+logperiod = 2
 theline = ""
 
 now = datetime.now()
