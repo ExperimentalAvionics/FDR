@@ -11,7 +11,9 @@ logperiod = 2
 theline = ""
 
 now = datetime.now()
-filename += str(now)[:10]
+filename += str(now)[:19]
+filename = filename.replace(" ","_")
+filename = filename.replace(":","")
 filename += ".csv"
 
 #get the database ready

@@ -7,5 +7,8 @@ CAN_Listeners script running https://github.com/ExperimentalAvionics/can_listene
 
 ## Release Notes: ##
 
+### 2021-10-20 ###
+* Changed the way filename created. Now a new log file will be created every time the system started. New filename structure: fdr_YYYY-MM-DD_HHMISS.csv
+
 ### 2021-06-17 ###
 * Minor change: log frequency chnged from 5 seconds to every 2 seconds
