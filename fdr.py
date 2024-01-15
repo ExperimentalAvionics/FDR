@@ -20,6 +20,14 @@ filename += ".csv"
 memdb = sqlite3.connect('/memdb/memdb.db')
 cursor = memdb.cursor()
 
+listOfTables = cursor.execute("""SELECT name FROM sqlite_master WHERE type='table'  AND name='messages'; """).fetchall()
+
+while listOfTables == []:
+	print('Table messages not found. Waiting for 3 seconds')
+	time.sleep(3)
+	listOfTables = cursor.execute("""SELECT name FROM sqlite_master WHERE type='table'  AND name='messages'; """).fetchall()
+
+
 
 file = open(filename, "a")
 
